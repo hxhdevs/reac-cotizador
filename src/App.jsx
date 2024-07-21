@@ -6,6 +6,9 @@ function App() {
 
   const [cantidad, setCantidad]=useState(10000);
                  //basicamente setCantidad es la funcion a usar
+  const MIN = 0;
+  const MAX = 20000;
+  const STEP = 100;
 
   function handleChange(e){
       setCantidad(+e.target.value);
@@ -20,6 +23,10 @@ function App() {
         type="range"
         className="w-full h-6 bg-gray-200 accent-lime-500 hover:accent-lime-600"
         onChange={handleChange}//esta linea viene siendo el equivalente a las dos lineas que siguen del cierre de function App
+        min={MIN}
+        max={MAX}
+        step={STEP}
+        value={cantidad}
       />
       <p className="text-center my-10 text-5xl font-extrabold text-indigo-600">{cantidad}</p>
     </div>
