@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Button from "./components/Button";
+import { formatearDinero } from "./helpers";
+
 function App() {
 // un hook o usestate no puede ir en un condicional solo despues de la linea previa function
 
@@ -56,8 +58,9 @@ function App() {
         step={STEP}
         value={cantidad}
       />
-      <p className="text-center my-10 text-5xl font-extrabold text-indigo-600">{cantidad}</p>
-    </div>
+      <p className="text-center my-10 text-5xl font-extrabold text-indigo-600">
+        {formatearDinero(cantidad)}</p>
+      </div>
   )
 }
 // const formulario = document.querySelector('.formulario');
