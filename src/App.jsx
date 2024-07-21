@@ -1,6 +1,12 @@
+import { useState } from "react";
 import Header from "./components/Header";
 
 function App() {
+// un hook o usestate no puede ir en un condicional solo despues de la linea previa function
+
+  let [cantidad, setCantidad]=useState(10000);
+
+  cantidad=20000;
 
   return (
     // Este espacio es solo para presentacion
