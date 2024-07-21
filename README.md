@@ -12,3 +12,5 @@ npm create vite@latest
 - despues de esto le damos nombre al proyecto elegimos React y JavaScript
 - entramos con cd al directorio 
 npm install
+# como correr el proyecto
+npm run dev
