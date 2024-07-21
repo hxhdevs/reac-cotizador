@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Button from "./components/Button";
 import { formatearDinero,calcularTotalPagar } from "./helpers";
@@ -11,6 +11,12 @@ function App() {
   const [meses, setMeses]=useState(6);
   const [total, setTotal]=useState(0);
                  //basicamente setCantidad es la funcion a usar
+
+  useEffect(() => {
+      const resultadoTotalPagar = calcularTotalPagar(cantidad,meses);
+      setTotal(resultadoTotalPagar);
+  },[cantidad, meses]);
+  
   const MIN = 0;
   const MAX = 20000;
   const STEP = 100;
@@ -84,7 +90,7 @@ function App() {
           Resumen<span className="text-indigo-600">de pagos</span>
         </h2>
         <p className="text-xl text-gray-500 text-center font-bold">{meses} Meses</p>
-        <p className="text-xl text-gray-500 text-center font-bold">Total a pagar</p>
+        <p className="text-xl text-gray-500 text-center font-bold">{formatearDinero(total)} Total a pagar</p>
         <p className="text-xl text-gray-500 text-center font-bold">Mensuales</p>
       </div>
 
