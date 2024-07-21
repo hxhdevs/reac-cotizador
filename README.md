@@ -27,3 +27,6 @@ npx tailwindcss init -p
 - se puede pasar informacion de un componente a otro con props
 # Props 
 - se recomienda usarlo para reutilizacion de codigo 
+
+# Tipear lo siguiente para crear el dist para deploy
+npm run build
