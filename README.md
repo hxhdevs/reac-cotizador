@@ -14,3 +14,10 @@ npm create vite@latest
 npm install
 # como correr el proyecto
 npm run dev
+# Instalando Tailwind CSS como desarrollo
+npm install -D tailwindcss postcss autoprefixer
+- despues tipeamos en terminal
+npx tailwindcss init -p
+- eso creara dos archivos llamados tailwind.config.cjs y postcss.config.cjs 
+- y en tailwind.config.cjs tenemos que escribir para que admita la busqueda de clases de tailwindCSS
+- el uso de className es usada por convencion ya que es palabra reservada de JS y puede traer problemas 
