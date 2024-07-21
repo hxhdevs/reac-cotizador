@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "./components/Header";
-
+import Button from "./components/Button";
 function App() {
 // un hook o usestate no puede ir en un condicional solo despues de la linea previa function
 
@@ -37,17 +37,14 @@ function App() {
       <Header />
 
       <div className="flex justify-between my-6">
-        <button
-          type='button'
-          className='h-10 w-10 flex items-center justify-center font-bold text-white text-2xl bg-lime-500 rounded-full hover:outline-none hover:ring-2 hover:ringoffset-2 hover:ring-lime-500'
-          onClick={handleClickDecremento}
-        >-</button>
-        
-        <button
-          type='button'
-          className='h-10 w-10 flex items-center justify-center font-bold text-white text-2xl bg-lime-500 rounded-full hover:outline-none hover:ring-2 hover:ringoffset-2 hover:ring-lime-500'
-          onClick={handleClickIncremento}
-        >+</button>
+        <Button
+        operador="-"
+        fn={handleClickDecremento}
+        />
+        <Button
+        operador="+"
+        fn={handleClickIncremento}
+        />
       </div>
       
       <input

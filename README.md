@@ -25,3 +25,5 @@ npx tailwindcss init -p
 # Componentes en React
 - Los componentes utilizan la extension .js o jsx. y se utilizand con un import
 - se puede pasar informacion de un componente a otro con props
+# Props 
+- se recomienda usarlo para reutilizacion de codigo 
