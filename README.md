@@ -21,3 +21,7 @@ npx tailwindcss init -p
 - eso creara dos archivos llamados tailwind.config.cjs y postcss.config.cjs 
 - y en tailwind.config.cjs tenemos que escribir para que admita la busqueda de clases de tailwindCSS
 - el uso de className es usada por convencion ya que es palabra reservada de JS y puede traer problemas 
+
+# Componentes en React
+- Los componentes utilizan la extension .js o jsx. y se utilizand con un import
+- se puede pasar informacion de un componente a otro con props
