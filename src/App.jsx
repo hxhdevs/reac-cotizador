@@ -4,10 +4,11 @@ import Header from "./components/Header";
 function App() {
 // un hook o usestate no puede ir en un condicional solo despues de la linea previa function
 
-  let [cantidad, setCantidad]=useState(10000);
+  const [cantidad, setCantidad]=useState(10000);
+                 //basicamente setCantidad es la funcion a usar
 
   function handleChange(e){
-      console.log(Number(e.target.value));
+      setCantidad(+e.target.value);
   }
 
   return (
@@ -20,6 +21,7 @@ function App() {
         className="w-full h-6 bg-gray-200 accent-lime-500 hover:accent-lime-600"
         onChange={handleChange}//esta linea viene siendo el equivalente a las dos lineas que siguen del cierre de function App
       />
+      <p className="text-center my-10 text-5xl font-extrabold text-indigo-600">{cantidad}</p>
     </div>
   )
 }
