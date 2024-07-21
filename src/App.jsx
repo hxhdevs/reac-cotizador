@@ -6,7 +6,9 @@ function App() {
 
   let [cantidad, setCantidad]=useState(10000);
 
-  cantidad=20000;
+  function handleChange(e){
+      console.log(Number(e.target.value));
+  }
 
   return (
     // Este espacio es solo para presentacion
@@ -16,9 +18,12 @@ function App() {
       <input
         type="range"
         className="w-full h-6 bg-gray-200 accent-lime-500 hover:accent-lime-600"
+        onChange={handleChange}//esta linea viene siendo el equivalente a las dos lineas que siguen del cierre de function App
       />
     </div>
   )
 }
+// const formulario = document.querySelector('.formulario');
+// formulario.addEventListener('change');
 
 export default App
