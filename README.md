@@ -30,3 +30,6 @@ npx tailwindcss init -p
 
 # Tipear lo siguiente para crear el dist para deploy
 npm run build
+
+Quiere ver el deploy checa la siguiente URL
+https://hxhdevs-cotizador.netlify.app/
